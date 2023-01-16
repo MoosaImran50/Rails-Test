@@ -1,0 +1,11 @@
+<br/>
+<%= render @product %>
+
+<div>
+  <br/>
+  <%= link_to "Edit this product", edit_product_path(@product), class:"btn btn-warning" %>
+  <%= link_to "Back to products", products_path, class:"btn btn-primary" %>
+  <br/>
+  <br/>
+  <%= button_to "Delete this product", @product, method: :delete, form: {data: {turbo_confirm: 'Are you sure?'}}, class:"btn btn-danger" %>
+</div>

@@ -1,2 +1,26 @@
+<br/>
 <h1>Home</h1>
-<p>Welcome To E-Store</p>
+<br/>
+
+<h3>
+  <strong>Welcome To E-Store</strong>
+</h3>
+
+<br/>
+<br/>
+<br/>
+
+<% if user_signed_in? %>
+  <div class="alert alert-success" role="alert">
+    <strong>
+      Signed in as:
+      <%= current_user.email %>
+    </strong>
+  </div>
+<% else %>
+  <div class="alert alert-warning" role="alert">
+    <strong>
+      Sign in to access the inventory
+    </strong>
+  </div>
+<% end %>
